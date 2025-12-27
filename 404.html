@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | For My Love</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffd1dc, #ffb7c5);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow-x: hidden;
+            color: #8a1c4a;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 600px;
+            width: 90%;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+        
+        .error-code {
+            font-size: 80px;
+            font-weight: bold;
+            color: #d81b60;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #d81b60;
+        }
+        
+        p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .btn {
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border: none;
+            padding: 15px 30px;
+            border-radius: 50px;
+            color: #8a1c4a;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .heart {
+            color: #d81b60;
+            font-size: 30px;
+            animation: heartbeat 1.5s infinite;
+            margin: 20px 0;
+        }
+        
+        @keyframes heartbeat {
+            0% { transform: scale(1); }
+            5% { transform: scale(1.1); }
+            10% { transform: scale(1); }
+            15% { transform: scale(1.1); }
+            50% { transform: scale(1); }
+            100% { transform: scale(1); }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .error-code {
+                font-size: 60px;
+            }
+            
+            h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-code">404</div>
+        <h1>Page Not Found</h1>
+        <div class="heart">❤️</div>
+        <p>Oops! It seems you've wandered off the path of love. Don't worry, even the strongest love stories have unexpected turns.</p>
+        <p>The page you're looking for doesn't exist, but our love story is still waiting for you at the beginning.</p>
+        <a href="/" class="btn"><i class="fas fa-home"></i> Return to Our Love Story</a>
+    </div>
+    
+    <script>
+        // Simple animation for the heart
+        document.addEventListener('DOMContentLoaded', function() {
+            const heart = document.querySelector('.heart');
+            setInterval(() => {
+                heart.style.animation = 'none';
+                setTimeout(() => {
+                    heart.style.animation = 'heartbeat 1.5s infinite';
+                }, 10);
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
